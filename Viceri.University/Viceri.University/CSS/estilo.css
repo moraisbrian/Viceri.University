@@ -1,0 +1,23 @@
+﻿body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#btnFiltrar{
+    margin-left: 5px;
+}
+
+#btnAdicionar{
+    margin-top: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+}
