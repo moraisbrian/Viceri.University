@@ -9,10 +9,8 @@ namespace Viceri.University.DAL
 {
     public class CursosDAL
     {
-        //Intanciando objeto da classe de Conexao
         Conexao con = new Conexao();
 
-        //Método de consulta sem passagem de parametro
         public DataTable Consultar()
         {
             SqlCommand cmd = new SqlCommand();
@@ -32,7 +30,6 @@ namespace Viceri.University.DAL
             return dt;
         }
 
-        //Método de exclusao
         public void Excluir(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -44,7 +41,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método de cadastro
         public void Cadastrar(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -61,7 +57,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método de consulta com passagem de parametro
         public DataTable Consultar(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -85,7 +80,6 @@ namespace Viceri.University.DAL
             return dt;
         }
 
-        //Método para preencher um objeto para fazer uma atualização
         public BLL.Cursos Preencher(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -119,7 +113,6 @@ namespace Viceri.University.DAL
             return c;
         }
 
-        //Método de atualização
         public void Atualizar(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -142,7 +135,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método para verificação do nome do curso, retorno verdadeiro ou falso
         public bool VerificaCurso(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -168,7 +160,6 @@ namespace Viceri.University.DAL
             
         }
 
-        //Método para verificação do nome do curso e id, retorno verdadeiro ou falso
         public bool VerificaIDeCurso(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();
@@ -197,7 +188,6 @@ namespace Viceri.University.DAL
 
         }
 
-        //Método para verificação do Id, retorno verdadeiro ou falso
         public bool VerificaId(BLL.Cursos c)
         {
             SqlCommand cmd = new SqlCommand();

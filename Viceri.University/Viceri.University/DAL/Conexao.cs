@@ -9,10 +9,8 @@ namespace Viceri.University.DAL
 {
     public class Conexao
     {
-        //Declarando uma variável do tipo SqlConnection
         SqlConnection con;
 
-        //Método construtor com a string de conexão
         public Conexao()
         {
             con = new SqlConnection();
@@ -21,7 +19,6 @@ namespace Viceri.University.DAL
                                    INTEGRATED SECURITY = TRUE";
         }
 
-        //Método de conexão
         public SqlConnection Conectar()
         {
             if (con.State == ConnectionState.Closed)
@@ -31,7 +28,6 @@ namespace Viceri.University.DAL
             return con;
         }
 
-        //Método para desconectar
         public void Desconectar()
         {
             if (con.State == ConnectionState.Open)

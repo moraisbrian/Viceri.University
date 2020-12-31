@@ -9,13 +9,10 @@ namespace Viceri.University.DAL
 {
     public class AlunosDAL
     {
-        //Intanciando objeto da classe de Conexao
         Conexao con = new Conexao();
 
-        //Método de consulta sem passagem de parametro
         public DataTable Consultar()
         {
-            //Fazendo a conversão da data de nascimento para a idade
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con.Conectar();
             cmd.CommandText = @"SELECT ALUNOS.ID,
@@ -37,10 +34,8 @@ namespace Viceri.University.DAL
             return dt;
         }
 
-        //Método de consulta com passagem de parametro
         public DataTable Consultar(BLL.Alunos a)
         {
-            //Fazendo a conversão da data de nascimento para a idade
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con.Conectar();
             cmd.CommandText = @"SELECT ALUNOS.ID,
@@ -66,7 +61,6 @@ namespace Viceri.University.DAL
             return dt;
         }
 
-        //Método de cadastro
         public void Cadastrar(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -83,7 +77,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método de exclusao
         public void Excluir(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -95,7 +88,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método para preencher um objeto para fazer uma atualização
         public BLL.Alunos Preencher(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -130,7 +122,6 @@ namespace Viceri.University.DAL
             return a;
         }
 
-        //Método de atualização
         public void Atualizar(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -153,7 +144,6 @@ namespace Viceri.University.DAL
             con.Desconectar();
         }
 
-        //Método para verificação do email, retorno verdadeiro ou falso
         public bool VerificaEmail(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -181,7 +171,6 @@ namespace Viceri.University.DAL
 
         }
 
-        //Método para verificação do Id, retorno verdadeiro ou falso
         public bool VerificaId(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
@@ -209,7 +198,6 @@ namespace Viceri.University.DAL
 
         }
 
-        //Método para verificação do email e id, retorno verdadeiro ou falso
         public bool VerificaIDeEmail(BLL.Alunos a)
         {
             SqlCommand cmd = new SqlCommand();
